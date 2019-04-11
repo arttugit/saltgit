@@ -1,0 +1,2 @@
+# salt
+Repository for salt.
