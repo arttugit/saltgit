@@ -32,3 +32,6 @@ Then I created a state file:
 	      - file: /etc/ssh/sshd_config
 
 
+I copied the ssh config file to salt:// and then configured it so it would use port 8888 instead of 22. After applying the sshd state, salt told me that everything went as planned.
+Then I tested it by using netcat. Command was: "nc -vz 10.0.2.15 8888" and it succeeded. I also tried using ssh: "ssh 8888 arttu@10.0.2.15" and that worked as well. So I had working ssh connection on port 8888!
+ 
