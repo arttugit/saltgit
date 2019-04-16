@@ -8,6 +8,14 @@ Before cloning the repository, I added my name and email information on git by u
 Now I wanted to clone my repository. On my github account under that repository which I want to clone, is a button "clone or download" which gives and url address.
 Then simply I gave command "git clone <my.repo.url>" now I could acces all my github files on xubuntu.
 
+Then some explanation of commands. "git log" command shows commit logs. This means that I can find dates and times for all commits made in this repository, which user made them and the comments for commits. In my case there were only four events on that log, because I haven't done many commits yet. 
+
+Im not sure what command "git diff" supposed to do...
+
+With "git blame" command it is possible to check what revision and author last modified each line of a file. I checked this file with git blame: git blame --show-stats Raportti.md. It shows details of the author and modifying date and time for each line of code. Since I made first changed to that file using my github account, it shows two different names as authors. I gave different name when using command git config.  
+
+
+
 
 
 
