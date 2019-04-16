@@ -15,9 +15,19 @@ Im not sure what command "git diff" supposed to do...
 With "git blame" command it is possible to check what revision and author last modified each line of a file. I checked this file with git blame: git blame --show-stats Raportti.md. It shows details of the author and modifying date and time for each line of code. Since I made first changed to that file using my github account, it shows two different names as authors. I gave different name when using command git config.  
 
 
+Last thing to do was to create a salt module. I was thinking about some different and new daemons to install and conf, but I couldn't come up with any. So I installed and configured ssh on a different port, since I haven't done it yet. 
+I was using my laptop to complete this exercise so I needed to install and conf a master-slave architecture first. It was done by installing salt master and slave pkgs, and then configuring the minion conf file to connect to master.
 
-
-
-
+Then I created a state file:
+ 
+	openssh-server:
+	  pkg.installed
+	/etc/ssh/sshd_config:
+	    file.managed:
+	      - source: salt://sshd_config
+	sshd:
+	  service.running:
+	    - watch:
+	      - file: /etc/ssh/sshd_config
 
 
