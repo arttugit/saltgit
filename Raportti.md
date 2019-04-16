@@ -14,6 +14,7 @@ Im not sure what command "git diff" supposed to do...
 
 With "git blame" command it is possible to check what revision and author last modified each line of a file. I checked this file with git blame: git blame --show-stats Raportti.md. It shows details of the author and modifying date and time for each line of code. Since I made first changed to that file using my github account, it shows two different names as authors. I gave different name when using command git config.  
 
+Then I made some stupid modifications to this report. I typed couple of lines "asdadasdasd". I didn't make the commit yet, and I used git blame command to check how does it look. Modifications were listed there, but after I typed "git reset --hard" the stupid modifications on the report were gone. 
 
 
 
